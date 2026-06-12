@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "ArtisanS",
+    "slug": "artisans",
+    "scheme": "artisans",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icons/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#090909"
+    },
+    "assetBundlePatterns": ["assets/**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.artisans.marketplace"
+    },
+    "android": {
+      "package": "com.artisans.marketplace",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icons/icon.png",
+        "backgroundColor": "#090909"
+      }
+    },
+    "plugins": ["expo-router"]
+  }
+}

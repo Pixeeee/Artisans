@@ -1,0 +1,6 @@
+-- Seed data is intentionally light because profiles reference auth.users.
+-- Create demo users through Supabase Auth first, then insert profiles,
+-- artist_profiles, artworks, listings, and certificates using the same IDs.
+--
+-- The frontend currently uses packages/shared/src/seed.ts for local demo data
+-- until a Supabase project is connected.
