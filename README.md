@@ -58,7 +58,7 @@ Prerequisites:
 
 ```bash
 git clone [your-public-repo-url]
-cd MVP
+cd Artisans
 npm install
 ```
 
