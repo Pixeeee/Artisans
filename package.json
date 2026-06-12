@@ -8,6 +8,10 @@
   ],
   "scripts": {
     "build": "npm run build -w @artisans/shared && npm run build -w @artisans/web",
+    "deploy:mobile:android": "npm run eas:preview:android -w @artisans/mobile",
+    "deploy:mobile:ios": "npm run eas:preview:ios -w @artisans/mobile",
+    "deploy:mobile:production": "npm run eas:production -w @artisans/mobile",
+    "deploy:web:build": "npm run build -w @artisans/shared && npm run build -w @artisans/web",
     "dev:web": "npm run dev -w @artisans/web --",
     "dev:mobile": "npm run start -w @artisans/mobile --",
     "test": "npm run test -w @artisans/shared && npm run test -w @artisans/web",

@@ -1,5 +1,7 @@
 # ArtisanS Deployment Runbook
 
+Primary deployment path: Vercel + Supabase + Expo EAS. See `docs/deployment-vercel-supabase-expo.md` for the full setup.
+
 ## Preflight
 
 1. Confirm `.env.example` has matching production secrets configured in the hosting provider.
@@ -16,8 +18,8 @@ npm.cmd run build
 
 ## Web Deploy
 
-1. Build with `npm.cmd run build -w @artisans/web`.
-2. Deploy the production Next.js build to the chosen platform.
+1. Build with `npm.cmd run deploy:web:build`.
+2. Deploy `apps/web` to Vercel.
 3. Verify runtime headers include:
    - `Content-Security-Policy`
    - `X-Content-Type-Options`
@@ -27,7 +29,8 @@ npm.cmd run build
 
 ## Mobile Release
 
-1. Build Expo preview.
+1. Set EAS public env vars for Supabase, Stellar, and the Vercel API base URL.
+2. Build Expo preview with `npm.cmd run deploy:mobile:android` or `npm.cmd run deploy:mobile:ios`.
 2. Verify mobile auth, payment intent display, and certificate pages against staging.
 3. Promote to production channels only after web/API staging passes.
 

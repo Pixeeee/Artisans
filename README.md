@@ -102,6 +102,16 @@ Run the mobile app:
 npm run dev:mobile
 ```
 
+Deploy setup:
+
+```bash
+npm run deploy:web:build
+npm run deploy:mobile:android
+npm run deploy:mobile:ios
+```
+
+Full deployment instructions are in `docs/deployment-vercel-supabase-expo.md`.
+
 Verify the project:
 
 ```bash
